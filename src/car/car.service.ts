@@ -9,7 +9,7 @@ import { CarDto } from './car.dto';
 export class CarService {
 
     constructor(@InjectModel('Car') private readonly carModel:Model<ICar>){   }
-
+ 
     public  getCar( ):Promise<CarDto[]> {
         const cars = this.carModel.find().exec();
         if (!cars || cars[0]) {

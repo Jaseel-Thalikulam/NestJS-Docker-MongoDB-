@@ -12,7 +12,8 @@ export class CarController {
     }
 
     @Post()
-    async postCar(@Body() car:CarDto) {
+    async postCar(@Body() car: CarDto) {
+        console.log(car)
         return this.carservice.postCar(car)
         }
 
